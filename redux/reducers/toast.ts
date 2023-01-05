@@ -24,7 +24,7 @@ const initialState: Toast[] = [];
 // });
 
 // slice 생성
-const toast = createSlice({
+const toastReducer = createSlice({
     name: 'toast',
     initialState,
     reducers: {
@@ -59,12 +59,10 @@ const toast = createSlice({
     // }
 });
 
-// Action 익스포트
-export const { addToast, deleteToast, deleteAllToast } = toast.actions;
+const { actions, reducer: toast } = toastReducer
 
-// slice 익스포트
-export default toast;
-
+export const toastActions = actions
+export default toast
 
 // *** 참고: extraReducers 를 buidler.addCase 로 작성해도 된다.
 // const couterSlice = createSlice({

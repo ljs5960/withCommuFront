@@ -1,8 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import {Toast} from "../redux/types/toastType";
 import {SetStateAction, useEffect, useRef, useState} from "react";
-import {addToast, deleteToast, deleteAllToast} from "../redux/reducers/toast"
 import {AppStore, RootState} from "../redux/store/store"
+import {toastActions} from "@redux/reducers/toast";
 
 
 const ToastUtils = () => {
@@ -13,7 +13,7 @@ const ToastUtils = () => {
 
     const timeOut = () => {
         fire.current = setTimeout(() => {
-            dispatch(deleteToast());
+            dispatch(toastActions.deleteToast());
         }, 1500)
     }
 

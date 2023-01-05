@@ -27,7 +27,7 @@ const rootReducer = (state: ReducerStates, action: AnyAction): CombinedState<Red
         // 슬라이스 통합
         default: {
             const combinedReducer = combineReducers({
-                toast: toast.reducer,
+                toast
             });
             return combinedReducer(state, action);
         }

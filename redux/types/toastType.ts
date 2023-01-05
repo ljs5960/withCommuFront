@@ -1,7 +1,7 @@
-import {ReactDOM, ReactElement, ReactHTML} from "react";
+import {ReactDOM, ReactElement, ReactHTML, ReactNode} from "react";
 
 export type Toast = {
-	msg : ReactDOM | ReactHTML | ReactElement<any> | string;
+	msg : ReactDOM | ReactHTML | ReactElement<any> | ReactNode | string;
 	uuid ?: string;
 	option ?:ToastOptionType;
     state ?: string;
