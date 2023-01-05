@@ -3,6 +3,7 @@ import {Toast} from "../redux/types/toastType";
 import {SetStateAction, useEffect, useRef, useState} from "react";
 import {AppStore, RootState} from "../redux/store/store"
 import {toastActions} from "@redux/reducers/toast";
+import ToastPop from "@component/modul/toast/toastPop";
 
 
 const ToastUtils = () => {
@@ -28,30 +29,10 @@ const ToastUtils = () => {
 
     return (
         <>
-            { toast.length > 0 && <div className="toast show">
-                <h4>테스트</h4>
-                <>{toast[0].msg}</>
-            </div> }
+            { toast.length > 0 && <ToastPop msg={toast[0].msg}></ToastPop> }
+            <ToastPop msg={"123"}></ToastPop>
         </>
     )
-
-    if (toast.length > 0) {
-        return (
-            <>
-                <div className="toast show">
-                    <h4>테스트</h4>
-                    <>
-                    {toast[0].msg}
-                    </>
-                </div>
-            </>
-        );
-    } else {
-        return (
-            <>
-            </>
-        );
-    }
 }
 
 export default ToastUtils;
