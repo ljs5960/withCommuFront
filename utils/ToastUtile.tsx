@@ -1,10 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
-import {Toast} from "../core2/redux/types/toastType";
+import {Toast} from "../redux/types/toastType";
 import {SetStateAction, useEffect, useRef, useState} from "react";
-// import {addToast, deleteToast} from "../core/redux/actions/toastAction";
-// import {AppState} from "../core/redux/reducers";
-import {addToast, deleteToast, deleteAllToast} from "../core2/redux/reducers/slice"
-import {AppStore, RootState} from "../core2/redux/store/store"
+import {addToast, deleteToast, deleteAllToast} from "../redux/reducers/toast"
+import {AppStore, RootState} from "../redux/store/store"
 
 
 const ToastUtils = () => {
