@@ -14,12 +14,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
       "@redux/*": [ "redux/*" ],
       "@component/*": [ "component/*" ],
       "@styles/*": [ "styles/*" ],
       "@lib/*": [ "lib/*" ],
-      "@schema/*": [ "schema/*" ]
+      "@schema/*": [ "schema/*" ],
+      "@utils/*": [ "utils/*" ],
+      "@hooks/*": [ "hooks/*" ],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
