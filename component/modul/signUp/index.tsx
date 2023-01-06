@@ -10,6 +10,7 @@ import SignUpPwdCheckInput from '@component/modul/signUp/SignUpPwdCheckInput'
 import SignUpNameInput from '@component/modul/signUp/SignUpNameInput'
 import SignUpPhoneInput from '@component/modul/signUp/SignUpPhoneInput'
 import SignUpNickInput from '@component/modul/signUp/SignUpNickInput'
+import {insSignUp} from "@api/signUp";
 
 const SignUp = () => {
 	const dispatch = useDispatch()
@@ -27,8 +28,9 @@ const SignUp = () => {
 	const phoneRegister = methods.register('userPhone')
 	const nickRegister = methods.register('userNick')
 
-	const submitHandler: SubmitHandler<SignUpRegisterSchemaType> = (data) => {
+	const submitHandler: SubmitHandler<SignUpRegisterSchemaType> = async (data) => {
 		console.log('submitData : ', data)
+		await insSignUp(data);
 	}
 	const submitErrorHandler: SubmitErrorHandler<SignUpRegisterSchemaType> = (data) => {
 		let value = Object.values(data)[0]

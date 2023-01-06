@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser')
 const os = require("os");
 const {PORT, HTTP} = serverRuntimeConfig;
 const hostname = process.env.host;
-const port = 3000
+const port = 8801
 
 const {isLocal, isDev, isProd, ENV} = publicRuntimeConfig;
 const app = next({dev: !isProd, hostname, port});
@@ -15,7 +15,7 @@ app.prepare()
         const handle = app.getRequestHandler();
         const server = express();
         // server.use(morgan('combined', { stream: stream, skip: skipLog}))
-        server.use(cookieParser());
+        // server.use(cookieParser());
         // server.use(express.static(__dirname + '/public'))
         server.get('*', async (req, res) => {
             if (req.url.includes('_app')) {

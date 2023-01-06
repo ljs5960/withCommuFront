@@ -23,6 +23,7 @@
       "@schema/*": [ "schema/*" ],
       "@utils/*": [ "utils/*" ],
       "@hooks/*": [ "hooks/*" ],
+      "@api/*": [ "api/*" ],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

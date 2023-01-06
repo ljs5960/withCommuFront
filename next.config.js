@@ -8,12 +8,12 @@ const ENV = process.env.NODE_ENV
 
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
+  swcMinify: false,
   trailingSlash: true,
   serverRuntimeConfig: { // Will only be available on the server side
     rootDir: path.join(__dirname, './'),
     hostname: 'localhost',
-    PORT: 8101,
+    PORT: 8801,
     HTTP: 'http'
   },
   publicRuntimeConfig: { // Will be available on both server and client
